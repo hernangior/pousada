@@ -14,11 +14,12 @@
   --color-gray: #F0F0F0;
 }
 
- #picture{
+#picture{
 	background-image: url('../imgs/elements/reservas_btn.png');
 	width: 150px;
 	height: 50px;
 	background-repeat:no-repeat;
+
 	margin-left: auto;
 	margin-right: auto;
 	display: block;	
@@ -35,12 +36,18 @@
 
 }
 
+html,
+body {
+  height: 100%;
+}
+
+
 .nav-custom{
 	padding: 3%;
 }
 
 .navbar-custom {
-	border-radius: 5px;
+	border-radius: 0px;
     background-color: var(--color-gray);
 }
 /* change the brand and text color */
@@ -56,14 +63,14 @@
 .navbar-custom .nav-item:hover .nav-link{
 	 background-color: var(--bg-color-active);
      color: var(--color-white);
-     border-radius: 5px;
+     border-radius: 0px;
 }
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item .nav-link.active{
 	background-color: var(--bg-color-selected); 
      color: var(--color-white);
-     border-radius: 5px;
+     border-radius: 0px;
 }
 
 .navbar-toggler-icon{
@@ -90,8 +97,9 @@
 }
 
 .img-custom-m{
-	margin-top: 30px;
-	margin-right: 50px;	
+
+	margin: 25px;
+
 }
 
 .section-custom-top-5{
@@ -105,8 +113,8 @@
 }
 
 .li-custom-m-20{
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 #main-content{
@@ -129,6 +137,15 @@
 	opacity: 0.8;
 	border-radius: 10px; 
 	flex-shrink: none;
+}
+
+.btn-custom{
+	background-color: var(--bg-color-selected); 
+	border: 0px;
+}
+
+.btn-custom:hover{
+	 background-color: var(--bg-color-active);
 }
 
 
