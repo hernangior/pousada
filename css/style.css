@@ -6,12 +6,33 @@
 
  */
 
+ :root {
+
+  --bg-color-selected: #204966; /* #2A8A9D */
+  --bg-color-active: #2A8A9D; /* #78B2BE */
+  --color-white: #FFFFFF;
+  --color-gray: #F0F0F0;
+}
+
+ #picture{
+	background-image: url('../imgs/elements/reservas_btn.png');
+	width: 150px;
+	height: 50px;
+	background-repeat:no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;	
+
+ }
+
  #main_page{ 
-  background: url('../imgs/backgrounds/01.jpg') no-repeat center center fixed; 
+
+  background: url('../imgs/backgrounds/01.02.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 
 .nav-custom{
@@ -20,7 +41,7 @@
 
 .navbar-custom {
 	border-radius: 5px;
-    background-color: #F0F0F0;
+    background-color: var(--color-gray);
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -33,39 +54,44 @@
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item:hover .nav-link{
-	 background-color: #78B2BE ;
-     color: #FFFFFF;
-     border-radius: 0px;
+	 background-color: var(--bg-color-active);
+     color: var(--color-white);
+     border-radius: 5px;
 }
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item .nav-link.active{
-	background-color: #2A8A9D;
-     color: #FFFFFF;
-     border-radius: 0px;
+	background-color: var(--bg-color-selected); 
+     color: var(--color-white);
+     border-radius: 5px;
 }
 
 .navbar-toggler-icon{
-	color: #FFFFFF;
+	color: var(--color-white);
 }
 
 .nav-link{
 	font-weight: bold;
-	color:#2A8A9D;	
+	color:var(--bg-color-selected); 	
 }
 
 .button-custom{
-	background-color: #2A8A9D;
+	background-color: var(--bg-color-selected); 
 }
 
 .i-custom{
-	color:#fff; 
+	color: var(--color-white);
 	font-size:28px;
 }
 
 .img-custom{
 	height: 10px;
 	width: 60px;	
+}
+
+.img-custom-m{
+	margin-top: 30px;
+	margin-right: 50px;	
 }
 
 .section-custom-top-5{
@@ -85,7 +111,7 @@
 
 #main-content{
 	border-radius: 10px;
-	background-color: #FFFFFF;
+	background-color: var(--color-white);
 	opacity: 0.8;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -93,9 +119,16 @@
 }
 
 .navbar-custom-reserva:hover {
-	 background-color: #78B2BE ;
-     color: #FFFFFF;
+	 background-color: var(--bg-color-active); 
+     color: var(--color-white);
      border-radius: 5px;
+}
+
+.footer-custom{
+	background-color: var(--color-gray);
+	opacity: 0.8;
+	border-radius: 10px; 
+	flex-shrink: none;
 }
 
 
