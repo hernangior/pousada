@@ -62,74 +62,91 @@ function openCity(evt, cityName) {
 } 
 </script>
 
+
+
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap-4.4.1-dist/bootstrap.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid" id="navbar_container">
-   
-   <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header" id="navbar_header">
-      <button type="button" class="navbar-toggle collapsed" 
-      data-toggle="collapse" data-target="#navbar_content" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar_content">
-      <ul class="nav navbar-nav justify-content-center">
-        <li class="active">
-        	<a href="#">
-        		Início 
-        		<span class="sr-only">
-        			(current)
-        		</span>
-        	</a>
-        </li>
-        <li>
-        	<a href="#">
-        		Apartamento
-        		<span class="sr-only">
-        			(current)
-        		</span>
-        	</a>
-        </li>
-        <li>
-        	<a href="#">
-        		Barra Grande
-        		<span class="sr-only">
-        			(current)
-        		</span>
-        	</a>
-        </li>
-        <li>
-        	<a href="#">
-        		Contato
-        		<span class="sr-only">
-        			(current)
-        		</span>
-        	</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-
-  </div>
-  <!-- /.container-fluid -->
-</nav>
 
 </head>
 
-<body>
+<body id="main_page">
+
+<div class="container-fluid" id="content">
+
+<!-- [Nav] Section -->
+
+  <nav data-section-id="1" data-component-id="2c0d_1_02_awz" data-category="navigations" 
+  class="navbar navbar-expand-lg navbar-light nav-custom">
+
+  <button class="navbar-toggler button-custom" type="button" data-toggle="collapse" data-target="#navigations-02">
+
+  	<i class="fa fa-bars i-custom"></i>
+	<!--   	
+	<span class="navbar-toggler-icon">
+  	</span> -->
+
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navigations-02">
+
+	<ul class="nav nav-pills nav-fill border navbar-custom border border-info">
+	  <li class="nav-item">
+	    <a class="nav-link active btn-js" href="#">
+	    	Início
+		</a>
+	  </li>		
+	  <li class="nav-item">
+	    <a class="nav-link btn-js" href="#">
+	    	Apartamento
+	    </a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link btn-js" href="#">
+	    	Barra Grande
+	    </a>
+	  </li>
+	  <li class="nav-item btn-js">
+	    <a class="nav-link" href="#">
+	    	Contato
+	    </a>
+	  </li>
+	</ul>
+
+  </div>
+
+</nav>
 
 
+
+  <div class="container text-center section-custom">
+    <div class="row mb-3" data-config-id="how_02">
+
+      <div class="col-md-12" style="margin-bottom: 0px;padding-bottom: 0px;">
+      	<img class="img-fluid mx-auto img-custom" src="imgs/elements/waves.png" alt="">
+      	<img class="img-fluid mx-auto my-2" src="imgs/elements/main_logo.png" alt="">
+      	<img class="img-fluid mx-auto img-custom" src="imgs/elements/waves.png" alt="">
+      </div>
+
+      <div class="col-md-12">
+		<img class="img-fluid" src="imgs/elements/message.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
 
 
 
@@ -160,6 +177,25 @@ function openCity(evt, cityName) {
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-4.4.1-dist/bootstrap.min.js"></script>
+
+<script>
+
+
+	// Add active class to the current button (highlight it)
+	var header = document.getElementById("navigations-02");
+	var btns = header.getElementsByClassName("btn-js");
+
+	for (var i = 0; i < btns.length; i++) {
+
+	  btns[i].addEventListener("click", function() {
+	  	var current = document.getElementsByClassName("active");
+	  	current[0].className = current[0].className.replace(" active", "");
+	  	this.className += " active";
+	  });
+
+	}
+
+</script>
 
 </body>
 

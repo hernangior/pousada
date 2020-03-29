@@ -1,57 +1,80 @@
-.navbar {
+/*
 
-	margin-left: 20%;
-	margin-right: 20%;
-	margin-top: 3%;
-	margin-bottom: : 5%;
+	- Default color: #78B2BE (blue marine)
+	- Segundary color: #F0F0F0 (gray) 
 
+ */
+
+ body{ 
+  background: url('../imgs/backgrounds/01.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#navbar_content{
-
+.nav-custom{
+	padding: 3%;
 }
 
-#navbar_container{
-	
+.navbar-custom {
+	border-radius: 5px;
+    background-color: #F0F0F0;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:hover .nav-link{
+	 background-color: #78B2BE ;
+     color: #FFFFFF;
+     border-radius: 0px;
 }
 
-#navbar_header{
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item .nav-link.active{
+	background-color: #2A8A9D;
+     color: #FFFFFF;
+     border-radius: 0px;
+}
 
+.navbar-toggler-icon{
+	color: #FFFFFF;
+}
+
+.nav-link{
+	font-weight: bold;
+	color:#2A8A9D;
+}
+
+.button-custom{
+	background-color: #2A8A9D;
+}
+
+.i-custom{
+	color:#fff; 
+	font-size:28px;
+}
+
+.img-custom{
+	height: 10px;
+	width: 60px;	
+}
+
+.section-custom{
+	margin-top: 5%;
 }
 
 
- /* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-} 
+
+
