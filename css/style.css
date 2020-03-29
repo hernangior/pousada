@@ -1,11 +1,12 @@
 /*
-
-	- Default color: #78B2BE (blue marine)
+	- Default color escuro: #204966 (blue marine escuro)
+	- Default color medio: #2A8A9D (blue marine medio)
+	- Default color claro: #78B2BE (blue marine claro)
 	- Segundary color: #F0F0F0 (gray) 
 
  */
 
- body{ 
+ #main_page{ 
   background: url('../imgs/backgrounds/01.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -50,7 +51,7 @@
 
 .nav-link{
 	font-weight: bold;
-	color:#2A8A9D;
+	color:#2A8A9D;	
 }
 
 .button-custom{
@@ -67,8 +68,34 @@
 	width: 60px;	
 }
 
-.section-custom{
+.section-custom-top-5{
 	margin-top: 5%;
+}
+
+.nav-link-m-10{
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.li-custom-m-20{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#main-content{
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+}
+
+.navbar-custom-reserva:hover {
+	 background-color: #78B2BE ;
+     color: #FFFFFF;
+     border-radius: 5px;
 }
 
 
