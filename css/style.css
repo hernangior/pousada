@@ -28,13 +28,37 @@
 
  #main_page{ 
 
-  background: url('../imgs/backgrounds/01.02.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
 }
+
+.page-index{
+	background: url('../imgs/backgrounds/01.jpg') no-repeat center center fixed; 
+}
+
+.page-quem-somos{
+	background: url('../imgs/backgrounds/02.jpeg') no-repeat center center fixed; 
+}
+
+.page-apartamento{
+	background: url('../imgs/backgrounds/03.jpg') no-repeat center center fixed; 
+}
+
+.page-barra-grande{
+	background: url('../imgs/backgrounds/04.jpg') no-repeat center center fixed; 
+}
+
+.page-contato{
+	background: url('../imgs/backgrounds/05.jpg') no-repeat center center fixed; 
+}
+
+
+
+
+
 
 html,
 body {
@@ -96,6 +120,11 @@ body {
 	width: 60px;	
 }
 
+.img-custom-2{
+	height: 10px;
+	width: 300px;	
+}
+
 .img-custom-m{
 
 	margin: 25px;
@@ -146,6 +175,11 @@ body {
 
 .btn-custom:hover{
 	 background-color: var(--bg-color-active);
+}
+
+.label-custom{
+	font-weight: bold;
+	color: var(--color-white);
 }
 
 

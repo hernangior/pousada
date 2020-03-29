@@ -44,12 +44,10 @@
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 
+
 </head>
 
-<body id="main_page" class="d-flex flex-column page-quem-somos">
-
-
-
+<body id="main_page" class="d-flex flex-column page-contato">
 
 <!-- [Nav] Section -->
   <nav data-section-id="1" data-component-id="2c0d_1_02_awz" data-category="navigations" 
@@ -65,7 +63,7 @@
     </a>
     </li>  
     <li class="nav-item">
-      <a class="nav-link active btn-js li-custom-m-20" href="#">
+      <a class="nav-link btn-js li-custom-m-20" href="quem_somos.html">
         Quem Somos
       </a>
     </li>
@@ -80,12 +78,11 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link btn-js li-custom-m-20" href="contato.html">
+      <a class="nav-link active btn-js li-custom-m-20" href="#">
         Contato
       </a>
     </li>
   </ul>
-
   <ul class="nav nav-pills nav-fill border navbar-custom border 
   border-info nav-link-m-10 navbar-custom-reserva" style="padding: 5px;border:0px !important;border-radius: 5px !important;">
     <li class="nav-item btn-js">
@@ -93,19 +90,19 @@
         </a>
     </li>
   </ul>
-
   </div>
 </nav>
 
-<div class="container-fluid" id="content_quem_somos" style="flex: 1 0 auto;">
+<div class="container-fluid" id="content_contato" style="flex: 1 0 auto;">
 
-  <div class="container text-center section-custom-top-5">
+
+<div class="container text-center section-custom-top-5">
 
     <h2 class="font_2" style="font-weight: bold;color: white;">
       <span style="font-family:roboto-bold,roboto,sans-serif;">
         <span style="letter-spacing:0.03em;">
           <span class="" ass="color_11">
-            Sinta-se em casa longe de casa
+            Contato
           </span>
         </span>
       </span>
@@ -117,62 +114,65 @@
     style="background-color: white;opacity: 0.8;border-radius: 5px;margin-top: 15px;">
       <div class="container text-center">
 
-        <div data-config-id="how_01">
+        <div data-config-id="how_01" style="margin-bottom: 75px;">
 
-          <div class="row align-items-center text-md-left mb-5" style="margin-bottom: 15px !important;">
-            <div class="col-md-6 order-1 order-md-0 text-center">
-              <img class="img-fluid"  src="imgs/elements/quem_somos/01.png"  alt="" style="border-radius: 5px;">
+          <div class="row align-items-center text-md-left mb-5" style="margin-bottom: 0px !important;padding-right: 20px;padding-left: 20px;">
+
+            <div class="col-md-3 order-1 order-md-0 text-center">
+              <img class="img-fluid"  src="imgs/elements/contato/01.png" alt="" style="border-radius: 5px;">
             </div>
-            <div class="col-md-5 mb-4 mb-md-0 text-justify">
-              <p>
-                Conheça a história da Pousada Pedaço do Paraíso:
-              </p>
-              <p>
-                Tudo começou, em 1988, quando a Historiadora Claudete Dias comprou ‘’um pedaço de
-                terra”, à beira mar, em Barra Grande, e construiu sua casinha de pescador (respeitando a
-                arquitetura típica),para ela um “pedaço do paraíso”! Nessa época, Barra Grande, isolada e
-                de difícil acesso, era conhecida apenas por algumas pessoas, em busca de paz e sossego!
-                Ao longo dos anos, a casinha de pescador foi sendo estruturada, mantendo as
-                características e ficando mais acolhedora, aconchegante e confortável .
-              </p>
-              <p>
-                Em 2008, exatamente, 20 anos depois, se tornou a casa sede da Pousada Pedaço do Paraíso e, 
-                em 2018, 10 anos depois, inaugurou as novas instalações. 
-                Nesses anos , o pedaço do Paraíso, de distante e isolado , 
-                ficou no melhor point do povoado Barra Grande!!
-              </p>
-              <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">
-                HOSPEDE-SE AQUI
-              </button>
+
+            <div class="col-md-9">
+              <form>
+                <label class="sr-only" for="input-contacts-01">Nome</label>
+                <input class="form-control mb-3" id="input-contacts-02" type="text" placeholder="Nome" name="name">
+                <label class="sr-only" for="input-contacts-01">Email</label>
+                <input class="form-control mb-3" id="input-contacts-01" type="email" placeholder="Email" name="email">
+                <label class="sr-only" for="textarea-contacts-01">Escreva alguma coisa...</label>
+                <textarea class="form-control mb-3" id="textarea-contacts-01" rows="5" placeholder="Escreva alguma coisa..."></textarea>
+                <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">Enviar</button>
+              </form>
             </div>
+
           </div>
 
-
-          <div class="row align-items-center text-md-left mb-5">
-             <div class="col-md-6 order-1 order-md-0 text-center">
-              <img class="img-fluid"  src="" alt="" style="border-radius: 5px;">
-            </div> 
-            <div class="col-md-5 mb-4 mb-md-0  text-justify">
-              <p>
-                Estamos localizados na Rua Pontal da Barra, 235, a mais badalada de Barra Grande e a poucos metros da praia.
-              </p>
-              <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">VER MAPA</button>
-            </div>
-          </div>
-
-           <div class="col-md-12 order-1 order-md-0" style="padding: 0px !important;margin-bottom: 15px;">
+<!--            <div class="col-md-12 order-1 order-md-0" style="padding: 0px !important;margin-bottom: 15px;">
             <img class="img-fluid"  src="imgs/elements/quem_somos/03.webp" alt="" style="border-radius: 5px;">
            </div>
 
            <div class="col-md-12 order-1 order-md-0" style="padding: 0px !important;">
             <img class="img-fluid"  src="imgs/elements/quem_somos/02.webp" alt="" style="border-radius: 5px;">
-           </div>
+           </div> -->
 
         </div>
+
+        <div data-config-id="how_01" style="height: 500% !important;">
+
+          <div class="row align-items-center text-md-left mb-5" style="margin-bottom: 0px !important;padding-right: 20px;padding-left: 20px;height: 100%;">
+
+            <div class="col-md-3 order-1 order-md-0 text-center">
+              <img class="img-fluid"  src="imgs/elements/contato/02.png" alt="" style="border-radius: 5px;">
+              <img class="img-fluid"  src="imgs/elements/contato/03.png" alt="" style="border-radius: 5px;">
+            </div>
+
+            <div class="col-md-9 text-center" style="height: 100%;">
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7969.353730700152!2d-41.408679!3d-2.909047!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94c692e2605f0c4a!2sPousada%20Peda%C3%A7o%20do%20Paraiso!5e0!3m2!1spt-BR!2sbr!4v1585523510762!5m2!1spt-BR!2sbr" 
+              frameborder="0" style="border:0;border-radius: 5px;height: 350px;width: 100%;" 
+              allowfullscreen="" aria-hidden="false" tabindex="0">
+              </iframe>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
   </div>
+
 
 </div>
 
