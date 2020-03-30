@@ -182,6 +182,14 @@ body {
 	color: var(--color-white);
 }
 
+.p-custom{
+	margin: 0px;
+}
+
+.icon-apt{
+	padding: 0px;
+}
+
 
 
 
