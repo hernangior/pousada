@@ -86,7 +86,7 @@ body {
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item .nav-link.active{
-	background-color: var(--bg-color-selected); 
+	 background-color: var(--bg-color-selected); 
      color: var(--color-white);
      border-radius: 0px;
 }
@@ -188,6 +188,10 @@ body {
 	color: var(--bg-color-selected);
 }
 
+.special{
+	  background-color: rgba(245, 245, 245, 1);
+	  opacity: 1
+}
 
 
 
