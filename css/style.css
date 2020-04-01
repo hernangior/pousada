@@ -193,6 +193,95 @@ body {
 	  opacity: 1
 }
 
+.social-icons-right{
+	
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.social-item-right{
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.social-nav-right{
+
+	padding: 15px;
+}
+
+.princial-nav{
+	/*
+	opacity: 0.8;
+	*/
+	border:0px !important;
+}
+
+.reserva-button{
+	padding: 5px;
+	border:0px !important;
+	border-radius: 5px !important;
+}
+
+.container-content{
+	flex: 1 0 auto;
+}
+
+.div-logo{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.p-t-20{
+	padding-top: 20px;
+}
+
+.m-t-25{
+	margin-top: 25px;
+}
+
+.div-categories{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-top: 50px;
+}
+
+.m-10{
+	margin: 10px;
+}
+
+.p-10{
+	padding: 10px;
+}
+
+.splitter{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.p-t-15{
+	padding-top: 15px;
+}
+
+.p-25{
+	padding: 25px;
+}
+
+
 
 
 
