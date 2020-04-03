@@ -19,15 +19,12 @@
 	width: 150px;
 	height: 50px;
 	background-repeat:no-repeat;
-
 	margin-left: auto;
 	margin-right: auto;
 	display: block;	
-
  }
 
  #main_page{ 
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,6 +59,9 @@ body {
 
 .nav-custom{
 	padding: 3%;
+		font-family: 'sunn_line_bold';
+	font-size: 30px;
+	padding-top: 0%;
 }
 
 .navbar-custom {
@@ -126,7 +126,11 @@ body {
 }
 
 .section-custom-top-5{
+	/*
 	margin-top: 5%;
+	*/
+	margin-top: 0px;
+
 }
 
 .nav-link-m-10{
@@ -136,8 +140,8 @@ body {
 }
 
 .li-custom-m-20{
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 #main-content{
@@ -281,8 +285,14 @@ body {
 	padding: 25px;
 }
 
+@font-face {
+    font-family: 'sunn_line_bold';
+    src: url('../fonts/sunn-line-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sunn-line-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-
+}
 
 
 
