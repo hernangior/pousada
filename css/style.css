@@ -147,7 +147,9 @@ body {
 #main-content{
 	border-radius: 10px;
 	background-color: var(--color-white);
+	/*
 	opacity: 0.8;
+	*/
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
@@ -161,7 +163,9 @@ body {
 
 .footer-custom{
 	background-color: var(--color-gray);
+	/*
 	opacity: 0.8;
+	*/
 	border-radius: 10px; 
 	flex-shrink: none;
 }
@@ -194,7 +198,9 @@ body {
 
 .special{
 	  background-color: rgba(245, 245, 245, 1);
+	  /*
 	  opacity: 1
+	  */
 }
 
 .social-icons-right{
