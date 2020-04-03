@@ -36,21 +36,28 @@
 <meta name="msapplication-TileImage" content="imgs/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<!-- <link rel="preconnect" href="//img6.wsimg.com/"> -->
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap-4.4.1-dist/bootstrap.css">
-<!-- Font Awesome - Old Version -->
+<!-- Font Awesome -->
 <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css">
+<!-- Font Awesome - New Version -->
+<link href="css/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 
-<!-- Font Awesome - New Version -->
-<link href="css/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
 <script defer src="css/fontawesome-free-5.13.0-web/js/all.js"></script> <!--load all styles -->
-
+<!-- Pooper -->
 <script src="js/popper.min.js"></script>
 
 </head>
 
+
+
+  <!-- [ H e a d ] End Section -->
+  
+
+  
 <body id="main_page" class="d-flex flex-column page-apartamento">
 
 <!-- [Nav] Section -->
@@ -110,6 +117,12 @@
   </div>
 </nav>
 
+
+
+  <!-- [ C o n t e n t ] Section -->
+  
+
+  
 <div class="container-fluid" id="content_apartamento" style="flex: 1 0 auto;">
 
   <div class="container text-center section-custom-top-5">
@@ -131,9 +144,7 @@
 
     <!-- opacity: 0.9; -->
 
-
       <div class="container text-center">
-
 
         <div class="row">
           
@@ -154,14 +165,12 @@
           <img class="img-fluid mx-auto"  src="imgs/elements/text_splitter.png" alt="" style="width: 500px;height: 2px;">
         </div>
 
-
         <div data-config-id="how_01">
 
           <div class="row align-items-center text-md-left mb-5">
             
              <div class="col-md-8 order-1 order-md-0" style="margin-left: 20px;">
             
-
                 <div id="carouselExampleIndicators" class="carousel slide special" data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -188,7 +197,6 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-
 
               </div>
 
@@ -349,6 +357,12 @@
 
 </div>
 
+
+
+<!-- [ F o o t e r ] Section -->
+
+
+
 <footer class="py-4" style="margin: 10px;">
   <div class="container text-center footer-custom">
     <div class="row mb-3" data-config-id="how_02">
@@ -402,6 +416,12 @@
       this.className += " active";
     });
   }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 
 <script>

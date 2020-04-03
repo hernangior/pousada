@@ -49,11 +49,23 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap-4.4.1-dist/bootstrap.css">
 <!-- Font Awesome -->
 <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css">
+<!-- Font Awesome - New Version -->
+<link href="css/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 
+<script defer src="css/fontawesome-free-5.13.0-web/js/all.js"></script> <!--load all styles -->
+<!-- Pooper -->
+<script src="js/popper.min.js"></script>
+
 </head>
 
+
+
+  <!-- [ H e a d ] End Section -->
+  
+
+  
 <body id="main_page" class="d-flex flex-column page-index">
 
   <!-- [Social Icons Right] Section -->
@@ -83,7 +95,7 @@
     <div class="collapse navbar-collapse justify-content-md-center" id="navigations-02">
     	<ul class="nav nav-pills nav-fill border navbar-custom shadow-lg princial-nav">
     	  <li class="nav-item">
-    	    <a class="nav-link active btn-js li-custom-m-20" href="#">
+    	    <a class="nav-link active btn-js li-custom-m-20" href="index.html">
     	    	Início
     		</a>
     	  </li>	
@@ -118,7 +130,12 @@
     </div>
   </nav>
 
-  <!-- [Content] Section -->
+
+
+  <!-- [ C o n t e n t ] Section -->
+  
+
+
   <div class="container-fluid container-content" id="content">
     <div class="container text-center section-custom-top-5">
       <div class="row mb-3" data-config-id="how_02">
@@ -160,6 +177,12 @@
       </div>
     </div>
   </div>
+
+
+
+<!-- [ F o o t e r ] Section -->
+
+
 
 <footer class="py-4 m-10">
   <div class="container text-center footer-custom">
@@ -221,6 +244,12 @@
 	  	this.className += " active";
 	  });
 	}
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 
 </body>

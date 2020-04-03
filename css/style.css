@@ -36,23 +36,23 @@
 }
 
 .page-index{
-	background: url('../imgs/backgrounds/01.jpg') no-repeat center center fixed; 
+	background: url('../imgs/backgrounds/jpg/01.jpg') no-repeat center center fixed; 
 }
 
 .page-quem-somos{
-	background: url('../imgs/backgrounds/02.jpeg') no-repeat center center fixed; 
+	background: url('../imgs/backgrounds/jpg/02.jpeg') no-repeat center center fixed; 
 }
 
 .page-apartamento{
-	background: url('../imgs/backgrounds/03.jpg') no-repeat center center fixed; 
+	background: url('../imgs/backgrounds/jpg/03.jpg') no-repeat center center fixed; 
 }
 
 .page-barra-grande{
-	background: url('../imgs/backgrounds/04.jpg') no-repeat center center fixed; 
+	background: url('../imgs/backgrounds/jpg/04.jpg') no-repeat center center fixed; 
 }
 
 .page-contato{
-	background: url('../imgs/backgrounds/05.jpg') no-repeat center center fixed; 
+	background: url('../imgs/backgrounds/jpg/05.jpg') no-repeat center center fixed; 
 }
 
 html,
