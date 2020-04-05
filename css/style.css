@@ -129,7 +129,7 @@ body {
 	margin: 25px;
 	*/
 	height: 150px;
-	width: 170px;
+	width: 100%;
 	margin: 0px !important;
 }
 
@@ -150,6 +150,7 @@ body {
 
 .img-sub-message{
 	height: 93px;
+	width: 100%;
 	/*
 	width: 300px;
 	*/
