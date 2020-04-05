@@ -532,9 +532,9 @@ body {
 .f-f-impact{
 	font-family: 'impact' !important;
 	font-weight: normal;
-	
+	/*
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	
+	*/
 }
 
 /* A L I G N */
