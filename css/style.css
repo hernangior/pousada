@@ -109,6 +109,11 @@ body {
 	font-size:28px;
 }
 
+.img-message{
+	width: 614px;
+	height: 107px;
+}
+
 .img-custom{
 	height: 10px;
 	width: 60px;	
@@ -120,7 +125,32 @@ body {
 }
 
 .img-custom-m{
+	/*
 	margin: 25px;
+	*/
+	height: 150px;
+	width: 120px;
+	margin: 0px !important;
+}
+
+.div-custom-icons{
+	padding: 5px;
+}
+
+.div-category-icons{
+	width: 100%;
+	margin-left: 0 !important;
+	margin-right: 0!important;
+}
+
+.div-index-logo{
+	width: 250px;
+	height: 212px;
+}
+
+.img-sub-message{
+	height: 93px;
+	width: 248px;
 }
 
 .section-custom-top-5{
@@ -205,6 +235,11 @@ body {
 	  */
 }
 
+.social-icons{
+	height: 65px; 
+	width: 65px;
+}
+
 .social-icons-right{
 	
 	padding-top: 0px;
@@ -216,6 +251,9 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-top: 0px;
+
+	height: 43px; 
+	width: 43px;
 }
 
 .social-item-right{
