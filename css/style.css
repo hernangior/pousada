@@ -59,7 +59,7 @@ body {
 
 .nav-custom{
 	padding: 3%;
-		font-family: 'sunn_line_bold';
+	font-family: 'sunn_line_bold';
 	font-size: 30px;
 	padding-top: 0%;
 }
@@ -190,6 +190,10 @@ body {
 	padding: 0px;
 }
 
+.color-active{
+	color: var(--bg-color-active);
+}
+
 .color-default{
 	color: var(--bg-color-selected);
 }
@@ -267,9 +271,19 @@ body {
 }
 
 @font-face {
+
     font-family: 'sunn_line_bold';
-    src: url('../fonts/sunn-line-bold-webfont.woff2') format('woff2'),
-         url('../fonts/sunn-line-bold-webfont.woff') format('woff');
+    src: url('../fonts/SUNN-Line-Bold/sunn-line-bold-webfont.woff2') format('woff2'),
+         url('../fonts/SUNN-Line-Bold/sunn-line-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'impact';
+    src: url('../fonts/Impact/impact-webfont.woff2') format('woff2'),
+         url('../fonts/Impact/impact-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -404,7 +418,15 @@ body {
 	margin: 10px;
 }
 
+.m-0{
+	margin: 0px !important;
+}
+
 /* P A D D I N G */
+
+.p-5{
+	padding: 5%;
+}
 
 .p-0{
 	padding: 0px !important;
@@ -412,6 +434,10 @@ body {
 
 .p-10{
 	padding: 10px;
+}
+
+.p-20{
+	padding: 20px;
 }
 
 .p-15{
@@ -422,16 +448,25 @@ body {
 	padding: 25px;
 }
 
+.p-t-0{
+	padding-top: 0 !important;
+}
+
 .p-t-20{
-	padding-top: 20px;
+	padding-top: 20px !important;
 }
 
 .p-t-15{
-	padding-top: 15px;
+	padding-top: 15px !important;
 }
 
 .p-l-20{
 	padding-left: 20px;
+}
+
+.p-r-l-0{
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* B O R D E R */
@@ -452,14 +487,50 @@ body {
 
 /* W I D T H  */
 
+.w-100{
+	width: 100%;
+}
+
 /* F O N T */
+
+.f-s-20{
+	font-size: 20px;
+}
+
+.f-s-25{
+	font-size: 25px !important;
+}
 
 .f-s-35{
 	font-size: 35px;
 }
 
+.f-s-40{
+	font-size: 40px;
+}
+
+.f-s-50{
+	font-size: 50px;
+}
+
+.f-s-60{
+	font-size: 60px;
+}
+
 .f-w-b{
 	font-weight: bold;
+}
+
+.f-f-custom{
+	font-family: 'sunn_line_bold' !important;
+}
+
+.f-f-impact{
+	font-family: 'impact' !important;
+	font-weight: normal;
+	/*
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	*/
 }
 
 /* A L I G N */
