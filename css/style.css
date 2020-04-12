@@ -540,6 +540,10 @@ body {
 	width: 100%;
 }
 
+.w-300{
+	width: 300px;
+}
+
 /* F O N T */
 
 .f-s-20{
@@ -586,4 +590,19 @@ body {
 
 .t-a-l{
 	text-align: left !important;
+}
+
+/**/
+
+.float{
+	position:fixed;
+	bottom:0;
+	right:20px;
+	text-align:center;
+  	font-size:30px;
+  	z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
 }
