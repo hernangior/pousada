@@ -514,6 +514,10 @@ body {
 	padding-bottom: 15px !important;
 }
 
+.p-b-0{
+	padding-bottom: 0px;
+}
+
 /* B O R D E R */
 
 .b-r-5{
