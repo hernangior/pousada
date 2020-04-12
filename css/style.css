@@ -110,8 +110,8 @@ body {
 }
 
 .img-message{
-	width: 614px;
-	height: 107px;
+	width: 1000px;
+	height: 200px;
 }
 
 .img-custom{
@@ -439,6 +439,10 @@ body {
 	margin-bottom: 15px !important;
 }
 
+.m-b-30{
+	margin-bottom: 30px !important;
+}
+
 .m-l-20{
 	margin-left: 20px;
 }
@@ -522,6 +526,10 @@ body {
 
 .b-r-5{
 	border-radius: 5px;
+}
+
+.b-r-15{
+	border-radius: 15px !important;
 }
 
 /* H E I G H T */
