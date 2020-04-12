@@ -455,6 +455,10 @@ body {
 	margin-top: 25px;
 }
 
+.m-t-20{
+	margin-top: 20px !important;
+}
+
 .m-r-15{
 	margin-right: 15px;
 }
