@@ -614,3 +614,9 @@ body {
 .my-float{
 	margin-top:16px;
 }
+
+.footer-img-svg{
+	height: 120px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
