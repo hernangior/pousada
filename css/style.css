@@ -509,6 +509,11 @@ body {
 	padding-top: 15px !important;
 }
 
+.p-l-0{
+	padding-left: 0px !important;
+}
+
+
 .p-l-20{
 	padding-left: 20px;
 }
