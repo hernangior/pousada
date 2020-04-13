@@ -335,23 +335,40 @@
           </div>
         </form> -->
 
-       <form name="sentMessage" id="contactForm" class="p-25" method="POST">
-       
-          <input type="hidden" id="name" name="name" value="Novidades">
-          <input type="hidden" id="message" name="message" value="Quero receber novidades!">
+                 <form name="sentMessage" id="contactForm" class="gform pure-form pure-form-stacked" method="POST" data-email="photosgiordano@gmail.com">
+                    <div>
 
-              <label class="sr-only" for="input-contacts-01">
-                Email
-              </label>
-              <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
+                        <div class="row">
 
-              <div id="success"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" name="name" placeholder="Nome" required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
 
-              <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">
-                P a r t i c i p a r
-              </button>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
 
-      </form>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" name="message" rows="4" placeholder="Mensagem" required></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div id="success"></div>
+
+                        <button type="submit" class="btn btn-default btn-lg">
+                            Enviar Mensagem
+                        </button>
+
+                    </div>
+                </form>
 
       </div>
     </div>
