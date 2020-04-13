@@ -557,6 +557,14 @@ body {
 	width: 100%;
 }
 
+.w-120-px{
+	width: 120px !important;
+}
+
+.w-200-px{
+	width: 200px !important;
+}
+
 .w-300{
 	width: 300px;
 }
