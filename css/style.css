@@ -641,3 +641,7 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+.d-p-none{
+	display: none;
+}
