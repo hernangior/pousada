@@ -335,11 +335,19 @@
           </div>
         </form> -->
 
-  <form action="https://www.elformo.com/forms/50bf1dfa-5f6f-40dc-9259-ef33d63841dd" method="post" accept-charset="UTF-8">
-    <input id="email" name="email" type="email" />
-    <textarea id="comment" name="comment"></textarea>
-    <input id="submit" name="submit" type="Submit" />
-  </form>
+       <form name="sentMessage" id="contactForm" class="p-25" method="POST">
+       
+          <input type="hidden" id="name" name="name" value="Novidades">
+          <input type="hidden" id="message" name="message" value="Quero receber novidades!">
+              <label class="sr-only" for="input-contacts-01">
+                Email
+              </label>
+              <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
+              <div id="success"></div>
+              <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">
+                P a r t i c i p a r
+              </button>
+      </form>
 
       </div>
     </div>
@@ -350,10 +358,9 @@
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap-4.4.1-dist/bootstrap.min.js"></script>
-
-<!-- <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-<script type="text/javascript" src="js/contact_me.js"></script> -->
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
 
 <script>
 	// Add active class to the current button (highlight it)
