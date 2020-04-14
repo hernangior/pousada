@@ -27,7 +27,7 @@ $(function() {
                 cache: false,
                 success: function() {
                     // Success message
-                    $('#success').html("<div class='alert alert-success'>");
+                    $('#success').html("<div class='alert alert-success f-s-25'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
@@ -51,7 +51,7 @@ $(function() {
                     $('#contactForm').trigger("reset");*/
 
 
-                    $('#success').html("<div class='alert alert-success'>");
+                    $('#success').html("<div class='alert alert-success f-s-25'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
