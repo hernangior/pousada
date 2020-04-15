@@ -475,16 +475,20 @@
       <!-- [Newsletter] Section -->
       <div class="col-md-4 p-2 py-3 f-f-custom">
         <img class="img-fluid mx-auto"  src="imgs/elements/text_novidades.png" alt="">
-        <form class="p-25"> 
+        
+        <form name="sentMessage" id="contactForm" class="p-25" method="POST">
+          <input type="hidden" id="name" name="name" value="Novidades">
+          <textarea id="message" name="message" class="d-p-none">Quero receber novidades!</textarea>
           <label class="sr-only" for="input-contacts-01">
             Email
           </label>
-          <input class="form-control mb-3 f-s-25" id="input-contacts-01" type="email" placeholder="Email" name="email">
-          <input type="hidden" name="" value="Quero receber novidades!">
+          <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
+          <div id="success"></div>
           <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">
             P a r t i c i p a r
           </button>
         </form>
+        
       </div>
     </div>
   </div>
