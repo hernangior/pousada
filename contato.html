@@ -192,12 +192,13 @@
 
             <div class="col-md-9">
               <form name="sentMessage" id="superContactForm" method="POST">
+                <input type="hidden" name="contact_form" id="contact_form" value="1">
                 <label class="sr-only" for="input-contacts-01">Nome</label>
-                <input class="form-control mb-3 f-s-25" id="name" name="name" type="text" placeholder="Nome" required="">
+                <input class="form-control mb-3 f-s-25" id="contact_name" name="contact_name" type="text" placeholder="Nome" required="">
                 <label class="sr-only" for="input-contacts-01">Email</label>
-                <input class="form-control mb-3 f-s-25" id="email" type="email" type="email" placeholder="Email" required="">
+                <input class="form-control mb-3 f-s-25" id="contact_email" name="contact_email" type="email" placeholder="Email" required="">
                 <label class="sr-only" for="textarea-contacts-01">Escreva alguma coisa...</label>
-                <textarea class="form-control mb-3 f-s-25" id="message" name="message" rows="5" placeholder="Escreva alguma coisa..." required=""></textarea>
+                <textarea class="form-control mb-3 f-s-25" id="contact_message" name="contact_message" rows="5" placeholder="Escreva alguma coisa..." required=""></textarea>
                 <div id="contactSuccess"></div>
                 <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">Enviar</button>
               </form>
