@@ -286,12 +286,12 @@
                   </p>
 
                  <div class="m-t-10">
-                  <form> 
+                  <form name="sentMessage" id="contactForm" method="POST">
                    
-                    <input class="form-control mb-3 form-control" id="input-contacts-01" type="date" placeholder="Check-in" name="email">
-                    <input class="form-control mb-3" id="input-contacts-01" type="date" placeholder="Check-out" name="email">
-                    <input class="form-control mb-3" id="input-contacts-01" type="number" placeholder="Adultos" name="email">
-                    <input class="form-control mb-3" id="input-contacts-01" type="number" placeholder="Crianças" name="email">
+                    <input class="form-control mb-3 form-control" type="date" placeholder="Check-in" id="check_in" name="check_in" required="">
+                    <input class="form-control mb-3" type="date" placeholder="Check-out" id="check_out" name="check_out" required="">
+                    <input class="form-control mb-3" type="number" placeholder="Adultos" id="adultos" name="adultos" required="">
+                    <input class="form-control mb-3" type="number" placeholder="Crianças" id="criancas" name="criancas">
 
                     <input type="hidden" name="" value="Quero receber novidades!">
                     <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">
@@ -568,9 +568,14 @@
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
+<!-- JQuery core JavaScript -->
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap-4.4.1-dist/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+
 <script>
   // Add active class to the current button (highlight it)
   var header = document.getElementById("navigations-02");
