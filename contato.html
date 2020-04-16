@@ -191,13 +191,14 @@
             </div>
 
             <div class="col-md-9">
-              <form>
+              <form name="sentMessage" id="contactForm" method="POST">
                 <label class="sr-only" for="input-contacts-01">Nome</label>
-                <input class="form-control mb-3 f-s-25" id="input-contacts-02" type="text" placeholder="Nome" name="name">
+                <input class="form-control mb-3 f-s-25" id="name" name="name" type="text" placeholder="Nome">
                 <label class="sr-only" for="input-contacts-01">Email</label>
-                <input class="form-control mb-3 f-s-25" id="input-contacts-01" type="email" placeholder="Email" name="email">
+                <input class="form-control mb-3 f-s-25" id="email" type="email" type="email" placeholder="Email">
                 <label class="sr-only" for="textarea-contacts-01">Escreva alguma coisa...</label>
-                <textarea class="form-control mb-3 f-s-25" id="textarea-contacts-01" rows="5" placeholder="Escreva alguma coisa..."></textarea>
+                <textarea class="form-control mb-3 f-s-25" id="message" name="message" rows="5" placeholder="Escreva alguma coisa..."></textarea>
+                <div id="success"></div>
                 <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">Enviar</button>
               </form>
             </div>
@@ -322,6 +323,9 @@
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap-4.4.1-dist/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
 
 <script>
   // Add active class to the current button (highlight it)
