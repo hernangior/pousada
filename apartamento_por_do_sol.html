@@ -304,10 +304,16 @@
                     <input class="form-control mb-3" type="date" placeholder="Check-out" id="check_out" name="check_out" required="">
                     <input class="form-control mb-3" type="number" placeholder="Adultos" id="adults" name="adults" required="">
                     <input class="form-control mb-3" type="number" placeholder="Crianças" id="childrens" name="childrens">
-                    <div id="reservationSuccess"></div>
-                    <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">
+                    <div id="reservationSuccess"></div> 
+                    <button class="btn btn-primary btn-block btn-custom m-b-15" type="submit" data-config-id="primary-action">
                       Reserve Já
                     </button>
+                    <div class="text-center">
+                      <div class="spinner-border text-info d-none text-center" role="status" id="reservation_loading">
+                        <span class="sr-only">
+                        </span>
+                      </div>
+                    </div>
                   </form>
                  </div>
 
@@ -557,7 +563,7 @@
          </div>
       </div>
       <!-- [Newsletter] Section -->
-      <div class="col-md-4 p-2 py-3 f-f-custom">
+      <div class="col-md-4 p-2 py-3 f-f-custom text-center">
         <img class="img-fluid mx-auto"  src="imgs/elements/text_novidades.png" alt="">
         
         <form name="sentMessage" id="contactForm" class="p-25" method="POST">
@@ -568,11 +574,13 @@
           </label>
           <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
           <div id="success"></div>
-          <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">
+          <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" data-config-id="primary-action">
             P a r t i c i p a r
           </button>
+          <div class="spinner-border text-info d-none" role="status" id="loading">
+            <span class="sr-only"></span>
+          </div>
         </form>
-
       </div>
     </div>
   </div>

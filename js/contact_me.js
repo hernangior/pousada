@@ -23,6 +23,8 @@ $(function() {
                     && (adults != '') && (adults != 0))
                 ){
 
+                $("#reservation_loading").removeClass('d-none');
+
                 name = 'Reservas'
                 email = 'pedacodoparaiso@site.com'
                 message = 
@@ -49,17 +51,23 @@ $(function() {
                     ((typeof contactMessage != 'undefined') && (typeof contactMessage != 'null') 
                     && (contactMessage != '') && (contactMessage != 0))
                     ){
+
+                    $("#contact_loading").removeClass('d-none');
+
                     // get values from Contact Form
                     var name = $("input#contact_name").val();
                     var email = $("input#contact_email").val();
                     var message = $("textarea#contact_message").val();
-                    console.log('1')
+
                 }else{
+
+                    $("#loading").removeClass('d-none');
+
                     // get values from Contact Form
                     var name = $("input#name").val();
                     var email = $("input#email").val();
                     var message = $("textarea#message").val();
-                    console.log('2')
+
                 }
 
                 var firstName = name; // For Success/Failure Message/
@@ -121,6 +129,11 @@ $(function() {
                         .append('</div>');
                     //clear all fields
                     $(formName).trigger("reset");
+
+                    $("#loading").addClass('d-none');
+                    $("#contact_loading").addClass('d-none');
+                    $("#reservation_loading").addClass('d-none');
+
                 },
                 error: function() {
 
@@ -172,6 +185,9 @@ $(function() {
                     //clear all fields
                     $(formName).trigger("reset");
 
+                    $("#loading").addClass('d-none');
+                    $("#contact_loading").addClass('d-none');
+                    $("#reservation_loading").addClass('d-none');
                 },
             })
         },

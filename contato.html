@@ -190,7 +190,7 @@
               <img class="img-fluid b-r-5"  src="imgs/elements/contato/01.png" alt="">
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-9 text-center">
               <form name="sentMessage" id="superContactForm" method="POST">
                 <input type="hidden" name="contact_form" id="contact_form" value="1">
                 <label class="sr-only" for="input-contacts-01">Nome</label>
@@ -200,7 +200,10 @@
                 <label class="sr-only" for="textarea-contacts-01">Escreva alguma coisa...</label>
                 <textarea class="form-control mb-3 f-s-25" id="contact_message" name="contact_message" rows="5" placeholder="Escreva alguma coisa..." required=""></textarea>
                 <div id="contactSuccess"></div>
-                <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">Enviar</button>
+                <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" data-config-id="primary-action">Enviar</button>
+                <div class="spinner-border text-info d-none" role="status" id="contact_loading">
+                  <span class="sr-only"></span>
+                </div>
               </form>
             </div>
 
@@ -299,7 +302,7 @@
          </div>
       </div>
       <!-- [Newsletter] Section -->
-      <div class="col-md-4 p-2 py-3 f-f-custom">
+      <div class="col-md-4 p-2 py-3 f-f-custom text-center">
         <img class="img-fluid mx-auto"  src="imgs/elements/text_novidades.png" alt="">
         
         <form name="sentMessage" id="contactForm" class="p-25" method="POST">
@@ -310,11 +313,13 @@
           </label>
           <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
           <div id="success"></div>
-          <button class="btn btn-primary btn-block btn-custom f-s-25" type="submit" data-config-id="primary-action">
+          <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" data-config-id="primary-action">
             P a r t i c i p a r
           </button>
+          <div class="spinner-border text-info d-none" role="status" id="loading">
+            <span class="sr-only"></span>
+          </div>
         </form>
-
       </div>
     </div>
   </div>
