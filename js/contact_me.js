@@ -8,15 +8,6 @@ $(function() {
         submitSuccess: function($form, event) {
 
             event.preventDefault(); // prevent default submit behaviour
-            // get values from Contact Form
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message/
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
 
             // get values from Reservation Form
             var checkIn = $("input#check_in").val();
@@ -24,7 +15,14 @@ $(function() {
             var adults = $("input#adults").val();
             var childrens = $("input#childrens").val();
 
-            if ((email == '') && (checkIn!='') && (checkOut!='') && (adults!='')){
+
+            if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
+                && (checkIn != '') && (checkIn != 0))&& 
+                ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
+                    && (checkOut != '') && (checkOut != 0))&&
+                ((typeof adults != 'undefined') && (typeof adults != 'null') 
+                    && (adults != '') && (adults != 0))
+                ){
                 name = 'Reservas'
                 email = 'pedacodoparaiso@site.com'
                 message = 
@@ -34,6 +32,16 @@ $(function() {
                 'Check-Out: '+checkOut+'\n'+
                 'Adultos: '+adults+'\n'+
                 'Criancas: '+childrens
+            }else{
+                // get values from Contact Form
+                var name = $("input#name").val();
+                var email = $("input#email").val();
+                var message = $("textarea#message").val();
+                var firstName = name; // For Success/Failure Message/
+                // Check for white space in name for Success/Fail message
+                if (firstName.indexOf(' ') >= 0) {
+                    firstName = name.split(' ').slice(0, -1).join(' ');
+                }
             }
 
             $.ajax({
@@ -49,7 +57,13 @@ $(function() {
 
                      let divSucess = '#success'
                      let formName = '#contactForm';
-                      if ((checkIn!='') && (checkOut!='') && (adults!='')){
+                    if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
+                        && (checkIn != '') && (checkIn != 0))&& 
+                        ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
+                            && (checkOut != '') && (checkOut != 0))&&
+                        ((typeof adults != 'undefined') && (typeof adults != 'null') 
+                            && (adults != '') && (adults != 0))
+                        ){
                         divSucess = '#reservationSuccess'
                         formName = '#reservationForm'
                       }
@@ -69,7 +83,13 @@ $(function() {
 
                      let divSucess = '#success'
                      let formName = '#contactForm';
-                      if ((checkIn!='') && (checkOut!='') && (adults!='')){
+                    if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
+                        && (checkIn != '') && (checkIn != 0))&& 
+                        ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
+                            && (checkOut != '') && (checkOut != 0))&&
+                        ((typeof adults != 'undefined') && (typeof adults != 'null') 
+                            && (adults != '') && (adults != 0))
+                        ){
                         divSucess = '#reservationSuccess'
                         formName = '#reservationForm'
                       }
