@@ -286,14 +286,12 @@
                   </p>
 
                  <div class="m-t-10">
-                  <form name="sentMessage" id="contactForm" method="POST">
-                   
+                  <form name="sentMessage" id="reservationForm" method="POST">
                     <input class="form-control mb-3 form-control" type="date" placeholder="Check-in" id="check_in" name="check_in" required="">
                     <input class="form-control mb-3" type="date" placeholder="Check-out" id="check_out" name="check_out" required="">
-                    <input class="form-control mb-3" type="number" placeholder="Adultos" id="adultos" name="adultos" required="">
-                    <input class="form-control mb-3" type="number" placeholder="Crianças" id="criancas" name="criancas">
-
-                    <input type="hidden" name="" value="Quero receber novidades!">
+                    <input class="form-control mb-3" type="number" placeholder="Adultos" id="adults" name="adults" required="">
+                    <input class="form-control mb-3" type="number" placeholder="Crianças" id="childrens" name="childrens">
+                    <div id="reservationSuccess"></div>
                     <button class="btn btn-primary btn-block btn-custom" type="submit" data-config-id="primary-action">
                       Reserve Já
                     </button>
