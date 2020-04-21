@@ -53,21 +53,21 @@ $(function() {
                 email = 'reservas@pedacodoparaiso.com'
                 message = 
                 'Ola, Tenho interesse em realizar uma Reserva!'+
-                'Check-In: '+checkIn+
-                'Check-Out: '+checkOut+
-                'Adultos: '+adults+
-                'Criancas: '+childrens+
-                'Dados do solicitante: '+
-                'Nome: '+personName+
-                'Sexo: '+personGener+
-                'Nascimento: '+personBirth+
-                'Nacionalidade: '+personCountry+
-                'RG: '+personRG+
-                'CPF/Passaporte: '+personCPF+
-                'Telefone Fixo: '+personPhoneFix+
-                'Telefone Celular: '+personPhoneCell+
-                'Endereco: '+personAdress+
-                'CEP: '+personCEP
+                '   |   Check-In: '+checkIn+
+                '   |   Check-Out: '+checkOut+
+                '   |   Adultos: '+adults+
+                '   |   Criancas: '+childrens+
+                '   |   Dados do solicitante: '+
+                '   |   Nome: '+personName+
+                '   |   Sexo: '+personGener+
+                '   |   Nascimento: '+personBirth+
+                '   |   Nacionalidade: '+personCountry+
+                '   |   RG: '+personRG+
+                '   |   CPF/Passaporte: '+personCPF+
+                '   |   Telefone Fixo: '+personPhoneFix+
+                '   |   Telefone Celular: '+personPhoneCell+
+                '   |   Endereco: '+personAdress+
+                '   |   CEP: '+personCEP
 
                 if (
                     !isValid(personRG) ||
