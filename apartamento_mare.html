@@ -282,27 +282,28 @@
 
               </div>
 
-              <div class="col-md-3 order-1 order-md-0 text-left border border-info" style="margin-left: 20px;padding: 15px;">
-                 <p class="p-custom small text-left">A partir de</p>
-                 <span class="text-left" style="font-size: 35px;">R$200</span>
-                 <p class="p-custom small text-left">Por noite</p>
+              <div class="col-md-3 order-1 order-md-0 text-left border border-info m-l-20 p-15">
+                 
+                 <p class="p-custom small text-left">
+                    A partir de
+                  </p>
+                 <span class="text-left f-s-35">
+                    R$200
+                  </span>
+                 <p class="p-custom small text-left">
+                    Por noite
+                  </p>
 
                  <div class="m-t-10">
-                  <form name="sentMessage" id="reservationForm" method="POST">
+                  <form id="formReservaData" name="formReservaData">
                     <input class="form-control mb-3 form-control" type="date" placeholder="Check-in" id="check_in" name="check_in" required="">
                     <input class="form-control mb-3" type="date" placeholder="Check-out" id="check_out" name="check_out" required="">
                     <input class="form-control mb-3" type="number" placeholder="Adultos" id="adults" name="adults" required="">
                     <input class="form-control mb-3" type="number" placeholder="Crianças" id="childrens" name="childrens">
                     <div id="reservationSuccess"></div>
-                    <button class="btn btn-primary btn-block btn-custom m-b-15" type="submit" data-config-id="primary-action">
+                    <button class="btn btn-primary btn-block btn-custom m-b-15" onclick="showReserva()">
                       Reserve Já
                     </button>
-                    <div class="text-center">
-                      <div class="spinner-border text-info d-none" role="status" id="reservation_loading">
-                        <span class="sr-only">
-                        </span>
-                      </div>
-                    </div>
                   </form>
                  </div>
 
@@ -582,8 +583,141 @@
   </div>
 </footer>
 
+<!-- Modal Form of Reservation-->
+<form name="reservationForm" id="reservationForm">
+  <div class="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content f-f-custom">
+
+        <div class="modal-header">
+          <img class="img-fluid h-100px"  src="imgs/svg/logo_complete.svg" alt="">
+          <table style="height: 100px;" class="mx-auto">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <h2 class="f-s-60 f-w-b color-default" id="modalTitleInitial">
+                    Registre-se
+                  </h2>
+                  <h2 class="f-s-60 f-w-b color-default d-none" id="modalTitleComplete">
+                    Reserva em Analise
+                  </h2>
+                  <h2 class="f-s-60 f-w-b color-default d-none" id="modalTitleLoading">
+                    Enviando...
+                  </h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="modal-body row f-s-25 m-15" id="modalBodyInitial">
+
+          <div class="col-md-9">
+            <label>Nome</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="" 
+            name="personName" id="personName" required>
+          </div>
+          <div class="col-md-3 ">
+            <label for="personGener">Sexo</label>
+            <select id="personGener" name="personGener" 
+            class="form-control mb-3 f-s-25" required="">
+              <option>M</option>
+              <option>F</option>
+            </select> 
+          </div>
+
+          <div class="col-md-4">
+            <label>Nascimento</label>
+            <input class="form-control mb-3 f-s-25" type="Date" placeholder="" 
+            id="PersonBirth" name="PersonBirth" required>
+          </div>
+          <div class="col-md-4">
+            <label>Nacionalidade</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="" 
+            id="personCountry" name="personCountry" required>
+          </div>
+          <div class="col-md-4">
+            <label>RG</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="" 
+            id="personRG" name="personRG" required>
+          </div>
+
+          <div class="col-md-6">
+            <label>CPF / Passaporte</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder=""  
+            id="personCPF" name="personCPF" required>
+           </div>
+          <div class="col-md-6">
+            <label>N. de Telefone Fixo</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="( XX ) X XXXX - XXXX" 
+            id="personPhoneFix" name="personPhoneFix" onkeypress="$(this).mask('(00) 00000-00009')" required>
+          </div>
+
+          <div class="col-md-9">
+            <label>Endereco</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="" 
+            id="personAdress" name="personAdress" required>
+          </div>
+          <div class="col-md-3">
+            <label>CEP</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="" 
+            id="personCEP" name="personCEP" required onkeypress="$(this).mask('00.000-000')">
+          </div>
+
+          <div class="col-md-6">
+            <label>E-Mail</label>
+            <input class="form-control mb-3 f-s-25" type="email" placeholder="" 
+            id="personEmail" name="personEmail" required>
+          </div>
+          <div class="col-md-6">
+            <label>N. de TelefoneCelular</label>
+            <input class="form-control mb-3 f-s-25" type="text" placeholder="( XX ) X XXXX - XXXX"  
+            id="personPhoneCell" name="personPhoneCell" onkeypress="$(this).mask('(00) 00000-00009')" required>
+          </div>
+
+        </div>
+
+        <div class="modal-body row f-s-25 m-15 text-center d-none" id="modalBodyComplete">
+          <p class="w-100">
+            Logo você receberá e-mail com resposta de disponibilidade para prosseguir com a confirmação de reserva.  
+          </p>
+          <p class="w-100">
+            Se não houver disponibilidade na Suíte da sua escolha, ou na data solicitada, 
+            faremos o possível pra te auxiliar no que for necessário pra você visitar o nosso Paraíso.
+          </p>
+        </div>
+
+        <div class="modal-footer" id="modalFooterInitial">
+          <div class="container p-0">
+              <button type="button" class="btn btn-secondary f-s-35" data-dismiss="modal">
+                Alterar Suite
+              </button>
+              <button type="submit" class="btn btn-primary f-s-35 float-right btn-custom" >
+                Enviar
+              </button>
+          </div>
+        </div> 
+
+        <div class="modal-footer d-none" id="modalFooterComplete">
+          <button type="button" class="btn btn-secondary f-s-35 mx-auto w-200-px btn-custom" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+
+        <div class="spinner-border text-info d-none text-center mx-auto m-20 p-100" 
+        role="status" id="modalLoading">
+          <span class="sr-only  text-center"></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+
 <!-- JQuery core JavaScript -->
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap-4.4.1-dist/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
@@ -591,6 +725,38 @@
 <script type="text/javascript" src="js/contact_me.js"></script>
 
 <script>
+
+  function isValid(field){
+    if ((typeof field != 'undefined') && (typeof field != 'null') 
+    && (field != '') && (field != 0)){
+      return true
+    }else{
+      return false
+    }
+  } 
+
+  function showReserva(){
+    var checkIn = $("input#check_in").val();
+    var checkOut = $("input#check_out").val();
+    var adults = $("input#adults").val();
+    var childrens = $("input#childrens").val();
+
+    if (isValid(checkIn) && isValid(checkOut) && isValid(adults)) {
+      
+      $('#modalFooterComplete').addClass('d-none')
+      $('#modalTitleComplete').addClass('d-none')
+      $('#modalBodyComplete').addClass('d-none')
+
+      $('#reservationForm').trigger("reset");
+      $('#exampleModalCenter').modal()
+
+      $('#modalFooterInitial').show()
+      $('#modalTitleInitial').show()
+      $('#modalBodyInitial').show()
+
+    }
+  }
+
   // Add active class to the current button (highlight it)
   var header = document.getElementById("navigations-02");
   var btns = header.getElementsByClassName("btn-js");
@@ -601,12 +767,11 @@
       this.className += " active";
     });
   }
-</script>
 
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
+  // Active the tooltips
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
 </script>
 
 </body>
