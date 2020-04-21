@@ -556,7 +556,8 @@
           </label>
           <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
           <div id="success"></div>
-          <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" data-config-id="primary-action">
+          <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" 
+          data-config-id="primary-action" id="submitNewsletterButton">
             P a r t i c i p a r
           </button>
           <div class="spinner-border text-info d-none" role="status" id="loading">
@@ -569,8 +570,8 @@
   </div>
 </footer>
 
+<!-- Modal Form of Reservation-->
 <form name="reservationForm" id="reservationForm">
-  <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content f-f-custom">
@@ -586,6 +587,9 @@
                   </h2>
                   <h2 class="f-s-60 f-w-b color-default d-none" id="modalTitleComplete">
                     Reserva em Analise
+                  </h2>
+                  <h2 class="f-s-60 f-w-b color-default d-none" id="modalTitleLoading">
+                    Enviando...
                   </h2>
                 </td>
               </tr>
@@ -685,6 +689,11 @@
           <button type="button" class="btn btn-secondary f-s-35 mx-auto w-200-px btn-custom" data-dismiss="modal">
             Fechar
           </button>
+        </div>
+
+        <div class="spinner-border text-info d-none text-center mx-auto m-20 p-100" 
+        role="status" id="modalLoading">
+          <span class="sr-only  text-center"></span>
         </div>
 
       </div>
