@@ -107,6 +107,13 @@ $(function() {
                     var email_temp = $("input#contact_email").val();
                     var message_temp = $("textarea#contact_message").val();
 
+                    var name = 'Contato'
+                    var email = 'reservas@pedacodoparaiso.com'
+                    var message = ' Ola, Tenho interesse em entrar em contato! '+
+                    ' Nome :'+name_temp+
+                    ' E-mail:'+email_temp+
+                    ' Mensagem: '+message_temp
+
                 }else{
 
                     $("#loading").removeClass('d-none');
@@ -116,6 +123,11 @@ $(function() {
                     var email_temp = $("input#email").val();
                     var message_temp = $("textarea#message").val();
 
+                    var name = 'Novidades'
+                    var email = 'reservas@pedacodoparaiso.com'
+                    var message = ' Ola, Tenho interesse em Novidades! '+
+                    ' E-Mail:'+email_temp
+
                 }
 
 /*                var firstName = name; // For Success/Failure Message/
@@ -124,13 +136,6 @@ $(function() {
                     firstName = name.split(' ').slice(0, -1).join(' ');
                 }*/
 
-                var name = 'Contato'
-                var email = 'reservas@pedacodoparaiso.com'
-                var message = ' Ola, Tenho interesse em entrar em contato! '+
-                ' Me chamam de :'+name_temp+
-                ' Meu email de contato:'+name_temp+
-                message_temp
-                
             }
 
             $.ajax({
