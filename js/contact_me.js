@@ -102,6 +102,8 @@ $(function() {
 
                 // Contact Form
 
+                console.log('forms')
+
                 if (((typeof contactForm != 'undefined') && (typeof contactForm != 'null') 
                     && (contactForm != '') && (contactForm != 0)) &&
                     ((typeof contactName != 'undefined') && (typeof contactName != 'null') 
@@ -130,6 +132,8 @@ $(function() {
                 // Newsletter Form
 
                 }else{
+
+                    console.log('Newsletter')
 
                     $("#loading").removeClass('d-none');
                     $('#submitNewsletterButton').hide()
