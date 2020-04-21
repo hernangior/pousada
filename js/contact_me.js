@@ -57,7 +57,7 @@ $(function() {
                 '   |   Check-Out: '+checkOut+
                 '   |   Adultos: '+adults+
                 '   |   Criancas: '+childrens+
-                '   |   Dados do solicitante: '+
+                '   Dados do solicitante   '+
                 '   |   Nome: '+personName+
                 '   |   Sexo: '+personGener+
                 '   |   Nascimento: '+personBirth+
