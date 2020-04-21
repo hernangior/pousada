@@ -143,14 +143,14 @@ $(function() {
                     var email_temp = $("input#email").val();
                     var message_temp = $("textarea#message").val();
 
-                    var name = 'Novidades'
+/*                    var name = 'Novidades'
                     var email = 'reservas@pedacodoparaiso.com'
                     var message = ' Ola, Tenho interesse em Novidades! '+
-                    ' E-Mail:'+email_temp
+                    ' E-Mail:'+email_temp*/
 
-/*                  var name = 'Contato'
+                    var name = 'Contato'
                     var email = 'reservas@pedacodoparaiso.com'
-                    var message = ' Ola, Tenho interesse em entrar em contato! '*/
+                    var message = ' Ola, Tenho interesse em entrar em contato! '
 
                 }
 
