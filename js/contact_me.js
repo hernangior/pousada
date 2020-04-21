@@ -165,7 +165,77 @@ $(function() {
                 cache: false,
                 success: function() {
 
+                    // Reservation Form
+                    if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
+                        && (checkIn != '') && (checkIn != 0))&& 
+                        ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
+                            && (checkOut != '') && (checkOut != 0))&&
+                        ((typeof adults != 'undefined') && (typeof adults != 'null') 
+                            && (adults != '') && (adults != 0))
+                        ){
+                        // Hide components of initial message
+                        $('#modalFooterInitial').hide()
+                        $('#modalTitleInitial').hide()
+                        $('#modalBodyInitial').hide()
+                        // Show components of complete message
+                        $('#modalFooterComplete').removeClass('d-none')
+                        $('#modalTitleComplete').removeClass('d-none')
+                        $('#modalBodyComplete').removeClass('d-none')
+                        // Clear all fields
+                        $('#formReservaData').trigger("reset");
+                        $('#reservationForm').trigger("reset");
+                        // Hide unecessery components
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
 
+                        $('#modalTitleLoading').addClass('d-none');
+                        $('#modalLoading').addClass('d-none');
+
+                      }else{
+
+                        // Contact Form
+
+                        if (((typeof contactForm != 'undefined') && (typeof contactForm != 'null') 
+                            && (contactForm != '') && (contactForm != 0)) &&
+                            ((typeof contactName != 'undefined') && (typeof contactName != 'null') 
+                            && (contactName != '') && (contactName != 0)) &&
+                            ((typeof contactEmail != 'undefined') && (typeof contactEmail != 'null') 
+                            && (contactEmail != '') && (contactEmail != 0)) &&
+                            ((typeof contactMessage != 'undefined') && (typeof contactMessage != 'null') 
+                            && (contactMessage != '') && (contactMessage != 0))
+                            ){
+
+                            divSucess = '#contactSuccess'
+                            formName = '#superContactForm';
+                            $('#submitContactButton').show()
+
+                        // Newsletter Form
+
+                        }else{
+                            divSucess = '#success'
+                            formName = '#contactForm';
+                            $('#submitNewsletterButton').show()
+                        }
+
+                        // Success message
+
+                        $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
+                        $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $(divSucess+' > .alert-success')
+                            .append("<strong>Sua mensagem foi enviada. </strong>");
+                        $(divSucess+' > .alert-success')
+                            .append('</div>');
+
+                        //clear all fields
+                        $(formName).trigger("reset");
+
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
+
+                      }
 
                 },
                 error: function() {
