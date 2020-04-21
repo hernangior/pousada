@@ -48,7 +48,7 @@ $(function() {
                 $("#reservation_loading").removeClass('d-none');
 
                 name = 'Reservas'
-                email = 'pedacodoparaiso@site.com'
+                email = 'reservas@pedacodoparaiso.com'
                 message = 
                 +'\n'+'\n'+
                 'Ola, Tenho interesse em realizar uma Reserva!'
