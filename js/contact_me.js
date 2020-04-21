@@ -1,3 +1,12 @@
+function isValid(field){
+if ((typeof field != 'undefined') && (typeof field != 'null') 
+&& (field != '') && (field != 0)){
+  return true
+}else{
+  return false
+}
+} 
+
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
@@ -15,6 +24,19 @@ $(function() {
             var adults = $("input#adults").val();
             var childrens = $("input#childrens").val();
 
+             // get values from Reservation Modal Form
+            var personName = $("input#personName").val();
+            var personGener = $("#personGener").val();
+            var personBirth = $("input#PersonBirth").val();
+            var personCountry = $("input#personCountry").val();
+            var personRG = $("input#personRG").val();
+            var personCPF = $("input#personCPF").val();
+            var personPhoneFix = $("input#personPhoneFix").val();
+            var personAdress = $("input#personAdress").val();
+            var personCEP = $("input#personCEP").val();
+            var personEmail = $("input#personEmail").val();
+            var personPhoneCell = $("input#personPhoneCell").val();
+
             if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
                 && (checkIn != '') && (checkIn != 0))&& 
                 ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
@@ -28,12 +50,42 @@ $(function() {
                 name = 'Reservas'
                 email = 'pedacodoparaiso@site.com'
                 message = 
+                +'\n'+'\n'+
                 'Ola, Tenho interesse em realizar uma Reserva!'
                 +'\n'+'\n'+
                 'Check-In: '+checkIn+'\n'+
                 'Check-Out: '+checkOut+'\n'+
                 'Adultos: '+adults+'\n'+
-                'Criancas: '+childrens
+                'Criancas: '+childrens+
+                +'\n'+'\n'+
+                'Dados do solicitante: '
+                +'\n'+'\n'+
+                'Nome: '+personName+'\n'+
+                'Sexo: '+personGener+'\n'+
+                'Nascimento: '+personBirth+'\n'+
+                'Nacionalidade: '+personCountry+'\n'+
+                'RG: '+personRG+'\n'+
+                'CPF/Passaporte: '+personCPF+'\n'+
+                'Telefone Fixo: '+personPhoneFix+'\n'+
+                'Telefone Celular: '+personPhoneCell+'\n'+
+                'Endereco: '+personAdress+'\n'+
+                'CEP: '+personCEP
+
+                if (
+                    !isValid(personRG) ||
+                    !isValid(personCPF) ||
+                    !isValid(personCEP) ||  
+                    !isValid(personName) ||
+                    !isValid(personBirth) ||
+                    !isValid(personEmail) ||
+                    !isValid(personGener) ||
+                    !isValid(personAdress) ||
+                    !isValid(personCountry) ||
+                    !isValid(personPhoneFix) ||
+                    !isValid(personPhoneCell)
+                    ){
+                    return
+                }
                 
             }else{
 
@@ -89,7 +141,6 @@ $(function() {
                 cache: false,
                 success: function() {
 
-
                     if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
                         && (checkIn != '') && (checkIn != 0))&& 
                         ((typeof checkOut != 'undefined') && (typeof checkOut != 'null') 
@@ -97,8 +148,22 @@ $(function() {
                         ((typeof adults != 'undefined') && (typeof adults != 'null') 
                             && (adults != '') && (adults != 0))
                         ){
-                        divSucess = '#reservationSuccess'
-                        formName = '#reservationForm'
+                        // Hide components of initial message
+                        $('#modalFooterInitial').hide()
+                        $('#modalTitleInitial').hide()
+                        $('#modalBodyInitial').hide()
+                        // Show components of complete message
+                        $('#modalFooterComplete').removeClass('d-none')
+                        $('#modalTitleComplete').removeClass('d-none')
+                        $('#modalBodyComplete').removeClass('d-none')
+                        // Clear all fields
+                        $('#formReservaData').trigger("reset");
+                        $('#reservationForm').trigger("reset");
+                        // Hide unecessery components
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
+
                       }else{
                         if (((typeof contactForm != 'undefined') && (typeof contactForm != 'null') 
                             && (contactForm != '') && (contactForm != 0)) &&
@@ -111,28 +176,28 @@ $(function() {
                             ){
                             divSucess = '#contactSuccess'
                             formName = '#superContactForm';
-                            console.log('super form')
                         }else{
                             divSucess = '#success'
                             formName = '#contactForm';
-                            console.log('other')
                         }
+
+                        // Success message
+                        $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
+                        $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $(divSucess+' > .alert-success')
+                            .append("<strong>Sua mensagem foi enviada. </strong>");
+                        $(divSucess+' > .alert-success')
+                            .append('</div>');
+
+                        //clear all fields
+                        $(formName).trigger("reset");
+
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
+
                       }
-
-                    // Success message
-                    $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
-                    $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $(divSucess+' > .alert-success')
-                        .append("<strong>Sua mensagem foi enviada. </strong>");
-                    $(divSucess+' > .alert-success')
-                        .append('</div>');
-                    //clear all fields
-                    $(formName).trigger("reset");
-
-                    $("#loading").addClass('d-none');
-                    $("#contact_loading").addClass('d-none');
-                    $("#reservation_loading").addClass('d-none');
 
                 },
                 error: function() {
@@ -144,8 +209,22 @@ $(function() {
                         ((typeof adults != 'undefined') && (typeof adults != 'null') 
                             && (adults != '') && (adults != 0))
                         ){
-                        divSucess = '#reservationSuccess'
-                        formName = '#reservationForm'
+                        // Hide components of initial message
+                        $('#modalFooterInitial').hide()
+                        $('#modalTitleInitial').hide()
+                        $('#modalBodyInitial').hide()
+                        // Show components of complete message
+                        $('#modalFooterComplete').removeClass('d-none')
+                        $('#modalTitleComplete').removeClass('d-none')
+                        $('#modalBodyComplete').removeClass('d-none')
+                        // Clear all fields
+                        $('#formReservaData').trigger("reset");
+                        $('#reservationForm').trigger("reset");
+                        // Hide unecessery components
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
+
                       }else{
                         if (((typeof contactForm != 'undefined') && (typeof contactForm != 'null') 
                             && (contactForm != '') && (contactForm != 0)) &&
@@ -162,6 +241,23 @@ $(function() {
                             divSucess = '#success'
                             formName = '#contactForm';
                         }
+
+                        // Success message
+                        $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
+                        $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $(divSucess+' > .alert-success')
+                            .append("<strong>Sua mensagem foi enviada. </strong>");
+                        $(divSucess+' > .alert-success')
+                            .append('</div>');
+
+                        //clear all fields
+                        $(formName).trigger("reset");
+
+                        $("#loading").addClass('d-none');
+                        $("#contact_loading").addClass('d-none');
+                        $("#reservation_loading").addClass('d-none');
+
                       }
 
 /*                    // Fail message
@@ -174,20 +270,6 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");*/
 
-                    // Success message
-                    $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
-                    $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $(divSucess+' > .alert-success')
-                        .append("<strong>Sua mensagem foi enviada. </strong>");
-                    $(divSucess+' > .alert-success')
-                        .append('</div>');
-                    //clear all fields
-                    $(formName).trigger("reset");
-
-                    $("#loading").addClass('d-none');
-                    $("#contact_loading").addClass('d-none');
-                    $("#reservation_loading").addClass('d-none');
                 },
             })
         },
