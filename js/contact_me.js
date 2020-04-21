@@ -50,25 +50,21 @@ $(function() {
                 name = 'Reservas'
                 email = 'reservas@pedacodoparaiso.com'
                 message = 
-                +'\n'+'\n'+
                 'Ola, Tenho interesse em realizar uma Reserva!'
-                +'\n'+'\n'+
-                'Check-In: '+checkIn+'\n'+
-                'Check-Out: '+checkOut+'\n'+
-                'Adultos: '+adults+'\n'+
+                'Check-In: '+checkIn+
+                'Check-Out: '+checkOut+
+                'Adultos: '+adults+
                 'Criancas: '+childrens+
-                +'\n'+'\n'+
                 'Dados do solicitante: '
-                +'\n'+'\n'+
-                'Nome: '+personName+'\n'+
-                'Sexo: '+personGener+'\n'+
-                'Nascimento: '+personBirth+'\n'+
-                'Nacionalidade: '+personCountry+'\n'+
-                'RG: '+personRG+'\n'+
-                'CPF/Passaporte: '+personCPF+'\n'+
-                'Telefone Fixo: '+personPhoneFix+'\n'+
-                'Telefone Celular: '+personPhoneCell+'\n'+
-                'Endereco: '+personAdress+'\n'+
+                'Nome: '+personName+
+                'Sexo: '+personGener+
+                'Nascimento: '+personBirth+
+                'Nacionalidade: '+personCountry+
+                'RG: '+personRG+
+                'CPF/Passaporte: '+personCPF+
+                'Telefone Fixo: '+personPhoneFix+
+                'Telefone Celular: '+personPhoneCell+
+                'Endereco: '+personAdress+
                 'CEP: '+personCEP
 
                 if (
@@ -107,26 +103,33 @@ $(function() {
                     $("#contact_loading").removeClass('d-none');
 
                     // get values from Contact Form
-                    var name = $("input#contact_name").val();
-                    var email = $("input#contact_email").val();
-                    var message = $("textarea#contact_message").val();
+                    var name_temp = $("input#contact_name").val();
+                    var email_temp = $("input#contact_email").val();
+                    var message_temp = $("textarea#contact_message").val();
 
                 }else{
 
                     $("#loading").removeClass('d-none');
 
                     // get values from Contact Form
-                    var name = $("input#name").val();
-                    var email = $("input#email").val();
-                    var message = $("textarea#message").val();
+                    var name_temp = $("input#name").val();
+                    var email_temp = $("input#email").val();
+                    var message_temp = $("textarea#message").val();
 
                 }
 
-                var firstName = name; // For Success/Failure Message/
+/*                var firstName = name; // For Success/Failure Message/
                 // Check for white space in name for Success/Fail message
                 if (firstName.indexOf(' ') >= 0) {
                     firstName = name.split(' ').slice(0, -1).join(' ');
-                }
+                }*/
+
+                var name = 'Contato'
+                var email = 'reservas@pedacodoparaiso.com'
+                var message = ' Ola, Tenho interesse em entrar em contato! '+
+                ' Me chamam de :'+name_temp+
+                ' Meu email de contato:'+name_temp+
+                message_temp
                 
             }
 
