@@ -121,7 +121,7 @@ $(function() {
                     var name_temp = $("input#contact_name").val();
                     var email_temp = $("input#contact_email").val();
                     var message_temp = $("textarea#contact_message").val();
-                    
+
                     var name = 'Contato'
                     var email = 'reservas@pedacodoparaiso.com'
                     var message = ' Ola, Tenho interesse em entrar em contato! '+
@@ -132,11 +132,16 @@ $(function() {
                 // Newsletter Form
 
                 }else{
-                    $("#loading").removeClass('d-none')
+
+                    console.log('Newsletter')
+
+                    $("#loading").removeClass('d-none');
                     $('#submitNewsletterButton').hide()
+
                     var name = 'Novidades'
                     var email = 'reservas@pedacodoparaiso.com'
-                    var message = ' Ola, Tenho interesse em entrar em contato! E-mail: ['+$("input#newsletterEmail").val()+']'
+                    var message = ' Ola, Tenho interesse em entrar em contato! E-mail'
+
                 }
 
 /*                var firstName = name; // For Success/Failure Message/
