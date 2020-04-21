@@ -52,12 +52,12 @@ $(function() {
                 name = 'Reservas'
                 email = 'reservas@pedacodoparaiso.com'
                 message = 
-                'Ola, Tenho interesse em realizar uma Reserva!'
+                'Ola, Tenho interesse em realizar uma Reserva!'+
                 'Check-In: '+checkIn+
                 'Check-Out: '+checkOut+
                 'Adultos: '+adults+
                 'Criancas: '+childrens+
-                'Dados do solicitante: '
+                'Dados do solicitante: '+
                 'Nome: '+personName+
                 'Sexo: '+personGener+
                 'Nascimento: '+personBirth+
