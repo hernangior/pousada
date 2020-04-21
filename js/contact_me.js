@@ -138,12 +138,14 @@ $(function() {
                     $("#loading").removeClass('d-none');
                     $('#submitNewsletterButton').hide()
 
+                    /*
+
                     // get values from Contact Form
                     var name_temp = $("input#name").val();
                     var email_temp = $("input#email").val();
                     var message_temp = $("textarea#message").val();
 
-/*                    var name = 'Novidades'
+                    var name = 'Novidades'
                     var email = 'reservas@pedacodoparaiso.com'
                     var message = ' Ola, Tenho interesse em Novidades! '+
                     ' E-Mail:'+email_temp*/
