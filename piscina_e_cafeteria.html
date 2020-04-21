@@ -391,11 +391,12 @@
          <img class="img-fluid mx-auto p-l-25 h-60"  src="imgs/svg/text_newsletter.svg" alt="">
         </div>
         <form name="contactForm" id="contactForm" class="p-25">
-          <label class="sr-only" for="newsletterEmail">
+          <input type="hidden" id="name" name="name" value="Novidades">
+          <textarea id="message" name="message" class="d-p-none">Quero receber novidades!</textarea>
+          <label class="sr-only" for="input-contacts-01">
             Email
           </label>
-          <input class="form-control mb-3 f-s-25" type="email" placeholder="Email" 
-          id="newsletterEmail" name="newsletterEmail" required>
+          <input class="form-control mb-3 f-s-25" id="email" type="email" placeholder="Email" name="email" required>
           <div id="success"></div>
           <button class="btn btn-primary btn-block btn-custom f-s-25 m-b-15" type="submit" 
           data-config-id="primary-action" id="submitNewsletterButton">
