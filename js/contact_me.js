@@ -152,7 +152,7 @@ $(function() {
 
                     var name = 'Contato'
                     var email = 'reservas@pedacodoparaiso.com'
-                    var message = ' Ola, Tenho interesse em entrar em contato! '
+                    var message = ' Ola, Tenho interesse em entrar em contato! E-mail: ['+$("input#newsletterEmail").val()+']'
 
                 }
 
