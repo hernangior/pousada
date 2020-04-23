@@ -1,1 +1,1 @@
-![enter image description here](https://pousadapedacodoparaiso.com/imgs/svg/logo_complete.svg)
+![enter image description here](https://pousadapedacodoparaiso.com/imgs/screenshots/01.png)
