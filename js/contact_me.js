@@ -34,6 +34,9 @@ $(function() {
         },
         submitSuccess: function($form, event) {
 
+            var google_form_id = "";
+            var data_content = {};
+
             event.preventDefault(); // prevent default submit behaviour
 
             // get values from Reservation Form
@@ -110,6 +113,25 @@ $(function() {
                 $('#modalTitleInitial').hide()
                 $('#modalTitleInitial').hide()
                 $('#modalBodyInitial').hide()
+
+                google_form_id = "1FAIpQLSdwktKC-CyiFxBu_kCVhz66KLE9oTgkT4oxsIw5Sdp60bJbKw";
+                data_content = {
+                    "entry.437635144"  :checkIn         ,
+                    "entry.248687947"  :checkOut        ,
+                    "entry.1226916961" :adults          ,
+                    "entry.1808109080" :childrens       ,
+                    "entry.699611865"  :personName      ,
+                    "entry.947893135"  :personGener     ,
+                    "entry.2017781221" :personBirth     ,
+                    "entry.711818060"  :personCountry   ,
+                    "entry.350815007"  :personRG        ,
+                    "entry.2063278341" :personCPF       ,
+                    "entry.960703935"  :personPhoneFix  ,
+                    "entry.1799531849" :personPhoneCell ,
+                    "entry.33109248"   :personAdress    ,
+                    "entry.280043100"  :personCEP       ,
+                    "entry.954337788"  :personEmail     
+                };
                 
             }else{
 
@@ -147,6 +169,13 @@ $(function() {
                     ' E-mail:'+email_temp+
                     ' Mensagem: '+message_temp
 
+                    google_form_id = "1FAIpQLSdf1pu3K4D4T_yXu0wp514kfQs2mwN0Wg1orDmbZTX2GAUP4g";
+                    data_content = {
+                        "entry.52904792": name_temp,
+                        "entry.1665733173": email_temp,
+                        "entry.1129926948": message_temp
+                    };
+
                 // Newsletter Form
 
                 }else{
@@ -172,6 +201,13 @@ $(function() {
                     var email = 'reservas@pedacodoparaiso.com'
                     var message = ' Ola, Tenho interesse em entrar em contato! E-Mail: ['+$("input#email").val()+']'
 
+                    google_form_id = "1FAIpQLSdf1pu3K4D4T_yXu0wp514kfQs2mwN0Wg1orDmbZTX2GAUP4g";
+                    data_content = {
+                        "entry.52904792": name,
+                        "entry.1665733173": email,
+                        "entry.1129926948": message
+                    };
+
                 }
 
 /*                var firstName = name; // For Success/Failure Message/
@@ -184,7 +220,7 @@ $(function() {
 
             $.ajax({
                 //url: "https://www.elformo.com/forms/aeaa8eff-dfca-4535-abb2-022b1788848e",
-                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdf1pu3K4D4T_yXu0wp514kfQs2mwN0Wg1orDmbZTX2GAUP4g/formResponse",
+                url: "https://docs.google.com/forms/u/0/d/e/"+google_form_id+"/formResponse",
                 type: "POST",
                 /*
                 data: {
@@ -193,11 +229,7 @@ $(function() {
                     message: message
                 },
                 */
-                data:{
-                    "entry.52904792": name_temp,
-                    "entry.1665733173": email_temp,
-                    "entry.1129926948": message_temp
-                },
+                data:data_content,
                 cache: false,
                 success: function() {
 
