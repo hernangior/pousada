@@ -7,6 +7,24 @@ if ((typeof field != 'undefined') && (typeof field != 'null')
 }
 } 
 
+/*
+function showSuccessMsg(divSucess, formName){
+    // Success message
+    $(divSucess).html("<div class='alert alert-success f-s-25 text-center'>");
+    $(divSucess+' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        .append("</button>");
+    $(divSucess+' > .alert-success')
+        .append("<strong>Sua mensagem foi enviada. </strong>");
+    $(divSucess+' > .alert-success')
+        .append('</div>');
+    //clear all fields
+    $(formName).trigger("reset");
+    $("#loading").addClass('d-none');
+    $("#contact_loading").addClass('d-none');
+    $("#reservation_loading").addClass('d-none');
+}
+*/
+
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
@@ -102,7 +120,7 @@ $(function() {
 
                 // Contact Form
 
-                console.log('forms')
+                //console.log('forms')
 
                 if (((typeof contactForm != 'undefined') && (typeof contactForm != 'null') 
                     && (contactForm != '') && (contactForm != 0)) &&
@@ -133,7 +151,7 @@ $(function() {
 
                 }else{
 
-                    console.log('Newsletter')
+                    //console.log('Newsletter')
 
                     $("#loading").removeClass('d-none');
                     $('#submitNewsletterButton').hide()
@@ -165,12 +183,20 @@ $(function() {
             }
 
             $.ajax({
-                url: "https://www.elformo.com/forms/aeaa8eff-dfca-4535-abb2-022b1788848e",
+                //url: "https://www.elformo.com/forms/aeaa8eff-dfca-4535-abb2-022b1788848e",
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdf1pu3K4D4T_yXu0wp514kfQs2mwN0Wg1orDmbZTX2GAUP4g/formResponse",
                 type: "POST",
+                /*
                 data: {
                     name: name,
                     email: email,
                     message: message
+                },
+                */
+                data:{
+                    "entry.52904792": name_temp,
+                    "entry.1665733173": email_temp,
+                    "entry.1129926948": message_temp
                 },
                 cache: false,
                 success: function() {
@@ -248,7 +274,7 @@ $(function() {
                       }
 
                 },
-                error: function() {
+                error: function(error) {
                     // Reservation Form
                     if (((typeof checkIn != 'undefined') && (typeof checkIn != 'null') 
                         && (checkIn != '') && (checkIn != 0))&& 
